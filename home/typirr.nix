@@ -146,7 +146,7 @@
       user.name = "typirr";
       user.email = "typirr@example.com";
       init.defaultBranch = "main";
-      credential.helper = "cache";
+      credential.helper = "store";
       safe.directory = ["/etc/nixos"];
     };
   };
