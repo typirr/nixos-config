@@ -41,10 +41,13 @@
   users.users.typirr = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-  };
   
-  programs.dconf.enable = true;
+ };
 
+  nixpkgs.config.allowUnfree = true;
+
+  programs.dconf.enable = true;
+  programs.steam.enable = true;
   environment.systemPackages = with pkgs; [
     git neovim curl wget htop fastfetch
     xinit xauth
