@@ -143,6 +143,7 @@
     protonup-qt
     mangohud
     mangojuice
+    gamemode
   ];
   programs.bash.enable = true;
   programs.git = {
