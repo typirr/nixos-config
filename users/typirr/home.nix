@@ -137,13 +137,16 @@
     lxappearance
     
     pulseaudio
+
     wine
     wine64
+    winetricks
     lutris
     protonup-qt
     mangohud
     mangojuice
   ];
+  programs.steam.enable = true;
   programs.bash.enable = true;
   programs.git = {
     enable = true;
