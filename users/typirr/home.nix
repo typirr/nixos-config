@@ -138,7 +138,6 @@
     pulseaudio
 
     wine
-    wine64
     winetricks
     lutris
     protonup-qt
