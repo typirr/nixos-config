@@ -107,7 +107,7 @@
      text-color: @accent;
    }
    '';
-
+  nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     alacritty
     librewolf
