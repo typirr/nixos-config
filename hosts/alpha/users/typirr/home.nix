@@ -54,8 +54,6 @@
    white   = "#eceff4"
    '';
 
-  home.file.".config/i3/config".source = ../../modules/desktop/i3-config;
-
   home.file.".config/rofi/config.rasi".text = ''
    * {
      bg: #2e3440;
@@ -193,5 +191,5 @@
     };
   };
 
-  home.stateVersion = "26.05";
+  home.stateVersion = "25.11";
 }
