@@ -3,7 +3,7 @@
 The first NixOS configuration using Flakes and Home Manager that follows the typiristic structure.
 
 ## Infrastructure Information
-
+```
 | **Main Machine** |
 | **Name** | alpha |
 | **Window Manager** | i3wm |
@@ -11,7 +11,7 @@ The first NixOS configuration using Flakes and Home Manager that follows the typ
 | **Hardware** | HP Compaq 6005 Pro MT |
 | **CPU** | AMD Athlon II X2 B28 |
 | **GPU** | AMD RS600 (iGPU) |
-
+```
 ## Directory Structure
 
  ### REBUILDING
