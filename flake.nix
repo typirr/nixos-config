@@ -11,11 +11,12 @@
 
  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }:
     
- let { x86l = "x86_64-linux";
+ let
+         x86l = "x86_64-linux";
          x86d = "x86_64-darwin";
 	 i686l = "i686-linux";
  	 arm64l = "aarch64-linux";
-	 arm64d = "aarch64-darwin"; };
+	 arm64d = "aarch64-darwin";
       
  in {
      nixosConfigurations.alpha = nixpkgs.lib.nixosSystem {
