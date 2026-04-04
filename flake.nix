@@ -1,28 +1,40 @@
 {
-  description = "nixy";
+ 
+ description = "Dr.Flake";
 
-  inputs = {
+ inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
-  let system = "x86_64-linux";
-  in {
-    nixosConfigurations.nixy = nixpkgs.lib.nixosSystem {
-      inherit system;
-
-      modules = [
-        ./hosts/nixy
-        home-manager.nixosModules.home-manager
-        {
+ outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }:
+    
+ let { x86l = "x86_64-linux";
+         x86d = "x86_64-darwin";
+	 i686l = "i686-linux";
+ 	 arm64l = "aarch64-linux";
+	 arm64d = "aarch64-darwin"; };
+      
+ in {
+     nixosConfigurations.alpha = nixpkgs.lib.nixosSystem {
+       system = "${x86l}";
+       modules = [
+         
+	 ./hosts/alpha
+         
+	 home-manager.nixosModules.home-manager {
           home-manager.backupFileExtension = "backup";
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.typirr = import ./users/typirr/home.nix;
+          home-manager.users.typirr = import ./hosts/alpha/users/typirr/home.nix;
         }
-      ];
-    };
-  };
+
+       ];
+     
+     };
+ 
+ };
+
 }
